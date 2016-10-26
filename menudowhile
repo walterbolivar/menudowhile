@@ -1,0 +1,94 @@
+// menu.cpp : Defines the entry point for the console application.
+// WALTER BOLIVAR
+
+#include "stdafx.h"
+#include "iostream"
+#include "conio.h"
+
+using namespace std;
+
+float isuma(float A,float B);
+float iresta(float A,float B);
+float imultiplicacion(float A,float B);
+float idivision(float A,float B);
+
+void main()
+{
+float A,B,S,R,M,D,suma,resta,multiplicacion,division; int opcion;
+
+do{
+	cout<<"ingrese el valor A: ";
+	cin>> A;
+  }while(A<=0);
+do{
+	cout<<"ingrese el valor B: ";
+	cin>> B;
+   }while(B<=0);
+do{
+	cout<<"menu"<<endl;
+	cout<<"1:suma"<<endl;
+	cout<<"2:resta"<<endl;
+	cout<<"3:multiplicacion"<<endl;
+	cout<<"4:division"<<endl;
+	cout<<"0:salir"<< endl;
+	cout<<"opcion";
+	cin>>opcion;
+
+	switch (opcion)
+	{
+	  case 1: suma=isuma(A,B);
+		  cout<<"la suma es"<<suma;
+		  break;
+	  case 2: resta=iresta(A,B);
+		  cout<<"la resta es"<<resta;
+		  break;
+
+	  case 3: multiplicacion=imultiplicacion(A,B);
+		  cout<<"la multiplicacion es"<<multiplicacion;
+		  break;
+
+	  case 4: division=idivision(A,B);
+		  cout<<"la division es: "<<division;
+          break;
+
+	  case 0:cout<<"salir";
+		  break;
+
+	  default: cout<<"error";
+		  break;
+
+	getch();
+	}
+	 system("cls");
+    }while(opcion!=0);
+}
+
+	float isuma(float A,float B);
+	{ 
+		float S;
+		S=A+B;
+		return S;
+	}
+
+	float iresta(float A,float B);
+	{
+	  float R;
+	  R=A-B;
+	  return R;
+	}
+
+	float imultiplicacion(float A,float B);
+	{
+	float M;
+	M=A*B;
+	return M;
+	}
+
+	float idivision(float A,float B);
+	{
+	float D;
+	D=A/B;
+	return D;
+	}
+
+
